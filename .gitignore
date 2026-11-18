@@ -1,0 +1,18 @@
+# Python / virtual environment
+.venv/
+__pycache__/
+*.py[cod]
+# Environment files
+.env
+# SQLite local DB (if any)
+food_waste.db
+# Node / frontend artifacts
+node_modules/
+frontend/dist/
+node-v20.12.0-darwin-x64/
+*.tar.xz
+frontend/npm/
+# OS / editor artefacts
+.DS_Store
+.idea/
+*.log

@@ -1,0 +1,3 @@
+recipient_org,food_category,quantity,unit,delivery_location,priority,verification_status
+Demo Recipient 1,Vegetables,80,kg,Demo Location A,high,unverified
+Demo Recipient 2,Fruits,30,kg,Demo Location B,normal,unverified

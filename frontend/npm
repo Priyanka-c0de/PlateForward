@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Wrapper to use bundled npm from extracted Node
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PATH="$DIR/node-v20.12.0-darwin-x64/bin:$PATH"
+"$DIR/node-v20.12.0-darwin-x64/bin/npm" "$@"

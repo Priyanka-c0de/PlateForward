@@ -1,0 +1,3 @@
+donor,food_category,description,quantity,unit,pickup_location,status,verification_status
+Demo Donor 1,Vegetables,Fresh carrots,100,kg,Demo Location A,pending,unverified
+Demo Donor 2,Fruits,Apple slices,50,kg,Demo Location B,pending,unverified
