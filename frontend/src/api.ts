@@ -15,7 +15,7 @@ import {
 
 // Base URL points to the FastAPI backend (running on localhost:8000)
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000',
   timeout: 10000,
 });
 

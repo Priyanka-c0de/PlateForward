@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: urban-food-waste-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements_backend.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      DATABASE_URL: sqlite:///./food_waste.db
+    autoDeploy: true
+    region: oregon
+
+staticSites:
+  - name: urban-food-waste-frontend
+    buildCommand: cd frontend && env PATH=$(pwd)/node-v20.12.0-darwin-x64/bin:$PATH npm install && env PATH=$(pwd)/node-v20.12.0-darwin-x64/bin:$PATH npm run build
+    publishPath: frontend/dist
+    env: static
+    plan: free
+    autoDeploy: true
+    region: oregon
+    envVars:
+      VITE_API_BASE_URL: https://urban-food-waste-backend.onrender.com
